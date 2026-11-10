@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CJP Keralam – Join Your District WhatsApp Group</title>
+<meta name="description" content="Join the CJP Keralam WhatsApp group for your district. Unity. Resilience. Progress.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+Malayalam:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fff8ec;          /* warm paper */
+    --ink: #141414;
+    --saffron: #ff7a1a;
+    --saffron-d: #e56300;
+    --green: #138808;
+    --green-l: #1fbf4a;
+    --card: #ffffff;
+    --muted: #5b5648;
+    --shadow: 6px 6px 0 var(--ink);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 17px/1.5 "Space Grotesk", "Noto Sans Malayalam", system-ui, sans-serif;
+    background-image: radial-gradient(rgba(20,20,20,.08) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  /* tricolour strip */
+  .strip { height: 10px; background: linear-gradient(90deg, var(--saffron) 33.3%, #fff 33.3% 66.6%, var(--green) 66.6%); border-bottom: 3px solid var(--ink); }
+
+  /* nav */
+  header.nav { background: var(--bg); border-bottom: 3px solid var(--ink); position: sticky; top: 0; z-index: 20; }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: "Archivo Black", sans-serif; font-size: 20px; letter-spacing: .3px; }
+  .brand svg { width: 38px; height: 38px; }
+  .brand small { font-family: "Space Grotesk"; font-weight: 700; background: var(--saffron); border: 2px solid var(--ink); border-radius: 6px; padding: 0 6px; font-size: 12px; letter-spacing: 1px; }
+  .brand, .nav a.pill { white-space: nowrap; flex: none; }
+  .nav a.pill { text-decoration: none; font-weight: 700; font-size: 15px; background: var(--green); color: #fff; border: 3px solid var(--ink); border-radius: 999px; padding: 6px 16px; box-shadow: 3px 3px 0 var(--ink); transition: transform .1s, box-shadow .1s; }
+  .nav a.pill:hover { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--ink); }
+
+  /* hero */
+  .hero { padding: 56px 0 40px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 25px; align-items: center; }
+  .tag { display: inline-block; font-weight: 700; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; background: var(--ink); color: var(--bg); padding: 5px 12px; border-radius: 999px; transform: rotate(-2deg); }
+  h1 { font-family: "Archivo Black", sans-serif; font-weight: 400; font-size: clamp(38px, 7vw, 74px); line-height: 1.02; margin: 18px 0 14px; letter-spacing: -.5px; }
+  h1 .hl { background: var(--saffron); padding: 0 10px; border: 3px solid var(--ink); border-radius: 10px; display: inline-block; transform: rotate(-1.5deg); box-shadow: 4px 4px 0 var(--ink); }
+  h1 .g { color: var(--green); }
+  .lead { font-size: 19px; color: var(--muted); max-width: 520px; margin: 0 0 24px; }
+  .lead b { color: var(--ink); }
+  .motto { font-family: "Archivo Black"; letter-spacing: 1px; font-size: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .motto span { border: 3px solid var(--ink); border-radius: 8px; padding: 4px 10px; background: #fff; }
+  .motto span:nth-child(1) { background: var(--saffron); }
+  .motto span:nth-child(3) { background: var(--green); color: #fff; }
+  .mascot { display: grid; place-items: center; }
+  .mascot .badge { width: min(100%, 380px); aspect-ratio: 1; border: 4px solid var(--ink); border-radius: 50%; background: #fff; box-shadow: 10px 10px 0 var(--ink); overflow: hidden; animation: bob 3s ease-in-out infinite; }
+  .mascot .badge img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  @keyframes bob { 0%,100% { transform: translateY(0) rotate(-2deg);} 50% { transform: translateY(-8px) rotate(2deg);} }
+
+  /* marquee */
+  .marquee { background: var(--ink); color: var(--bg); border-block: 3px solid var(--ink); overflow: hidden; white-space: nowrap; font-family: "Archivo Black"; font-size: 18px; padding: 10px 0; }
+  .marquee div { display: inline-block; padding-left: 100%; animation: scroll 24s linear infinite; }
+  .marquee i { color: var(--saffron); font-style: normal; margin: 0 18px; }
+  @keyframes scroll { to { transform: translateX(-100%); } }
+
+  /* section */
+  section { padding: 56px 0; }
+  h2 { font-family: "Archivo Black"; font-weight: 400; font-size: clamp(28px, 5vw, 44px); margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 32px; }
+
+  /* cards */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 26px; }
+  .card { background: var(--card); border: 3px solid var(--ink); border-radius: 18px; box-shadow: var(--shadow); padding: 22px; display: flex; flex-direction: column; gap: 14px; text-decoration: none; transition: transform .12s, box-shadow .12s; position: relative; }
+  .card:hover, .card:focus-visible { transform: translate(-3px,-3px); box-shadow: 9px 9px 0 var(--ink); outline: none; }
+  .card:focus-visible { outline: 3px dashed var(--saffron); outline-offset: 4px; }
+  .card .num { position: absolute; top: -14px; right: 16px; background: var(--saffron); border: 3px solid var(--ink); border-radius: 8px; font-family: "Archivo Black"; font-size: 13px; padding: 2px 9px; transform: rotate(3deg); }
+  .card:nth-child(even) .num { background: var(--green); color: #fff; }
+  .card .ml { font-family: "Noto Sans Malayalam", sans-serif; font-weight: 700; font-size: 15px; color: var(--muted); }
+  .card h3 { font-family: "Archivo Black"; font-weight: 400; font-size: 27px; line-height: 1.1; margin: 0; word-break: break-word; }
+  .card .join { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: var(--green); color: #fff; border: 3px solid var(--ink); border-radius: 12px; padding: 11px 16px; font-weight: 700; font-size: 17px; }
+  .card:hover .join { background: var(--green-l); color: var(--ink); }
+  .join svg { width: 24px; height: 24px; flex: none; }
+  .join .arrow { font-family: "Archivo Black"; transition: transform .12s; }
+  .card:hover .arrow { transform: translateX(4px); }
+  .card.soon { background: repeating-linear-gradient(45deg, #fff, #fff 12px, #fff3dd 12px, #fff3dd 24px); border-style: dashed; box-shadow: none; cursor: default; }
+  .card.soon:hover { transform: none; box-shadow: none; }
+  .card.soon .join { background: transparent; color: var(--ink); border-style: dashed; }
+
+  /* how-to */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; counter-reset: s; }
+  .step { background: #fff; border: 3px solid var(--ink); border-radius: 16px; padding: 20px; counter-increment: s; }
+  .step::before { content: counter(s); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--saffron); border: 3px solid var(--ink); font-family: "Archivo Black"; margin-bottom: 10px; }
+  .step:nth-child(2)::before { background: #fff; }
+  .step:nth-child(3)::before { background: var(--green); color: #fff; }
+  .step b { display: block; font-size: 18px; margin-bottom: 4px; }
+  .step p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  /* footer */
+  footer { background: var(--ink); color: var(--bg); border-top: 3px solid var(--ink); padding: 36px 0 28px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; }
+  footer .brand { color: var(--bg); }
+  footer p { margin: 0; color: #cfc8b6; font-size: 14px; }
+
+  @media (max-width: 760px) {
+    .hero { padding-top: 36px; }
+    .hero .wrap { grid-template-columns: 1fr; }
+    .mascot { order: -1; }
+    .mascot .badge { width: 220px; box-shadow: 6px 6px 0 var(--ink); }
+    .brand small { display: none; }
+    .nav .wrap { gap: 8px; padding: 0 14px; }
+    .brand { font-size: 16px; gap: 7px; }
+    .brand svg { width: 30px; height: 30px; }
+    .nav a.pill { font-size: 13px; padding: 4px 11px; border-width: 2px; box-shadow: 2px 2px 0 var(--ink); }
+  }
+  @media (prefers-reduced-motion: reduce) { .marquee div, .mascot svg { animation: none; } .marquee div { padding-left: 0; } }
+</style>
+</head>
+<body>
+
+<!-- Cockroach mascot, reused as logo -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="roach" viewBox="0 0 200 200">
+    <g stroke="#141414" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <!-- antennae -->
+      <path d="M88 52 C70 30 52 22 36 26"/><path d="M112 52 C130 30 148 22 164 26"/>
+      <!-- legs -->
+      <path d="M62 98 L28 84"/><path d="M60 124 L22 128"/><path d="M68 150 L36 176"/>
+      <path d="M138 98 L172 84"/><path d="M140 124 L178 128"/><path d="M132 150 L164 176"/>
+    </g>
+    <!-- body -->
+    <ellipse cx="100" cy="122" rx="46" ry="60" fill="#8a4a1f" stroke="#141414" stroke-width="7"/>
+    <path d="M100 66 V182" stroke="#141414" stroke-width="5"/>
+    <path d="M62 112 Q100 100 138 112" stroke="#141414" stroke-width="4" fill="none"/>
+    <ellipse cx="84" cy="100" rx="8" ry="16" fill="#b9733a" opacity=".7"/>
+    <!-- head -->
+    <circle cx="100" cy="60" r="28" fill="#a85b27" stroke="#141414" stroke-width="7"/>
+    <!-- sunglasses -->
+    <rect x="68" y="50" width="28" height="18" rx="6" fill="#141414"/>
+    <rect x="104" y="50" width="28" height="18" rx="6" fill="#141414"/>
+    <path d="M96 58 H104" stroke="#141414" stroke-width="5"/>
+    <path d="M73 54 L82 54" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M109 54 L118 54" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <!-- smirk -->
+    <path d="M88 78 Q102 88 116 74" stroke="#141414" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="wa" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.26-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.39 1.01 2.56.12.17 1.75 2.67 4.23 3.74 1.98.85 2.38.68 2.81.64.43-.04 1.39-.57 1.59-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.47-.28-.25-.12-1.47-.73-1.7-.82-.23-.08-.39-.12-.56.12-.17.25-.64.82-.78.98-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47z"/>
+  </symbol>
+</svg>
+
+<div class="strip"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="CJP Keralam home">
+      <svg><use href="#roach"/></svg>
+      CJP KERALAM <small>OFFICIAL</small>
+    </a>
+    <a class="pill" href="#groups">Join a group ↓</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="tag">Kerala Chapter • WhatsApp</span>
+        <h1>Find your <span class="hl">district</span>.<br>Join the <span class="g">movement.</span></h1>
+        <p class="lead">Pick your district below and join the <b>CJP Keralam</b> WhatsApp community near you.</p>
+        <div class="motto"><span>Unity</span><span>Resilience</span><span>Progress</span></div>
+      </div>
+      <div class="mascot">
+        <div class="badge"><img src="cjpicon.png" alt="CJP Keralam Volunteers – Cockroach Janta Party logo"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div>
+      <span>Join your district</span><i>●</i><span>CJP Keralam</span><i>●</i><span>Unity</span><i>●</i><span>Resilience</span><i>●</i><span>Progress</span><i>●</i>
+      <span>Join your district</span><i>●</i><span>CJP Keralam</span><i>●</i><span>Unity</span><i>●</i><span>Resilience</span><i>●</i><span>Progress</span><i>●</i>
+    </div>
+  </div>
+
+  <section id="groups">
+    <div class="wrap">
+      <h2>District WhatsApp Groups</h2>
+      <p class="sub">Tap your district to open WhatsApp and join the group.</p>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2>How to join</h2>
+      <p class="sub">Takes ten seconds.</p>
+      <div class="steps">
+        <div class="step"><b>Pick your district</b><p>Choose the card for the district you live or work in.</p></div>
+        <div class="step"><b>Tap “Join”</b><p>WhatsApp opens with the group invite. Install WhatsApp if you haven’t already.</p></div>
+        <div class="step"><b>Say hello</b><p>Read the group rules, introduce yourself, and get involved.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg><use href="#roach"/></svg> CJP KERALAM</a>
+    <p>Unity. Resilience. Progress. · Please keep the groups respectful.</p>
+  </div>
+</footer>
+
+<script>
+  // To add a district later, just add a line here.
+  var GROUPS = [
+    { name: "Ernakulam",          ml: "എറണാകുളം",          url: "https://chat.whatsapp.com/LuWiNA0hDPW5m5lhOikEB3?s=cl&p=a&iam=2" },
+    { name: "Kannur",             ml: "കണ്ണൂർ",            url: "https://chat.whatsapp.com/EXsuT3c5lNOEuybH3eYbFU?s=sw&p=a&iam=2" },
+    { name: "Palakkad",           ml: "പാലക്കാട്",          url: "https://chat.whatsapp.com/GGyKKotoZYDHnx7GB6jjaV?s=cl&p=a&iam=2" },
+    { name: "Kollam",             ml: "കൊല്ലം",            url: "https://chat.whatsapp.com/I4JUcFlzdt1FR5yQi3Ozyu" },
+    { name: "Thiruvananthapuram", ml: "തിരുവനന്തപുരം",     url: "https://chat.whatsapp.com/JixF7yAyoFJERibznaAiRk?s=cl&p=a&iam=2" }
+  ];
+
+  var grid = document.getElementById('grid');
+  GROUPS.forEach(function (g, i) {
+    var a = document.createElement('a');
+    a.className = 'card';
+    a.href = g.url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.setAttribute('aria-label', 'Join ' + g.name + ' district WhatsApp group');
+    a.innerHTML =
+      '<span class="num">#' + String(i + 1).padStart(2, '0') + '</span>' +
+      '<span class="ml"></span><h3></h3>' +
+      '<span class="join"><svg aria-hidden="true"><use href="#wa"/></svg><span>Join WhatsApp Group</span><span class="arrow">→</span></span>';
+    a.querySelector('.ml').textContent = g.ml;
+    a.querySelector('h3').textContent = g.name;
+    grid.appendChild(a);
+  });
+
+  var soon = document.createElement('div');
+  soon.className = 'card soon';
+  soon.innerHTML = '<span class="ml">ഉടൻ വരുന്നു</span><h3>More districts coming soon</h3><span class="join">Stay tuned</span>';
+  grid.appendChild(soon);
+</script>
+</body>
+</html>
